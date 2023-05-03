@@ -1,0 +1,611 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+@import 'bootstrap/dist/css/bootstrap.css';
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5fceb !important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+i {
+  cursor: pointer;
+}
+
+a:link {
+  color: unset !important;
+}
+
+a:visited {
+  color: unset !important;
+}
+
+a:active {
+  color: unset !important;
+}
+
+a {
+  color: unset !important;
+  text-decoration: none !important;
+}
+
+section {
+  padding: 1.5rem 2rem !important;
+}
+
+.btn {
+  padding: 0.5rem 1.5rem !important;
+  border-radius: 0.4rem !important;
+  border: none !important;
+  outline: none !important;
+  transition: 0.3s all ease-in-out !important;
+  font-size: 0.7rem !important;
+}
+
+.active {
+  font-weight: 600 !important;
+  color: #FF5050;
+}
+
+.show-list {
+  display: flex !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+.sign-up__container__row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sign-up__container__row__col {
+  display: flex;
+  justify-content: center;
+}
+.sign-up__container__row__col form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  margin: 2.5rem 1rem;
+  margin-top: 1.5rem;
+}
+.sign-up__container__row__col form label {
+  width: 100%;
+}
+.sign-up__container__row__col form label .text {
+  width: 100%;
+  height: 3rem;
+}
+.sign-up__container__row__col form label .email {
+  width: 100%;
+  height: 3rem;
+}
+.sign-up__container__row__col form label .password {
+  width: 100%;
+  height: 3rem;
+}
+.sign-up__container__row__col form div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+@media (max-width: 575px) {
+  .sign-up__container__row__col form div {
+    gap: 0.5rem;
+  }
+}
+.sign-up__container__row__col form div .btn-submit {
+  background: #FF5050;
+  color: #fff;
+  transition: 0.3s all ease-in-out;
+}
+@media (max-width: 510px) {
+  .sign-up__container__row__col form div .btn-submit {
+    font-size: 0.85rem;
+  }
+}
+@media (max-width: 400px) {
+  .sign-up__container__row__col form div .btn-submit {
+    font-size: 0.7rem;
+    padding: 0.5rem 1rem;
+  }
+}
+.sign-up__container__row__col form div .btn-submit:hover {
+  background: #FA913C;
+  color: #fff;
+}
+.sign-up__container__row__col form div p {
+  padding: 0;
+  margin: 0;
+}
+@media (max-width: 510px) {
+  .sign-up__container__row__col form div p {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 400px) {
+  .sign-up__container__row__col form div p {
+    font-size: 0.75rem;
+  }
+}
+.sign-up__container__row__col form div p span {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+.sign-up__container__row__col form div p span:hover {
+  color: #b25205;
+}
+
+.header__container__row__col {
+  padding: 1.5rem 1.5rem !important;
+}
+@media (max-width: 575px) {
+  .header__container__row__col {
+    padding: 1rem 1rem !important;
+  }
+}
+.header__container__row__col .main {
+  display: flex;
+  justify-content: space-between;
+}
+.header__container__row__col .main img {
+  height: 1.1rem;
+}
+.header__container__row__col .main button {
+  background-color: #FF5050;
+  color: #fff;
+}
+
+.home-wrapper__container__row {
+  display: flex;
+  justify-content: center;
+}
+.home-wrapper__container__row__col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.home-wrapper__container__row__col .list .accordion .accordion-item button {
+  box-shadow: none !important;
+}
+.home-wrapper__container__row__col .list .accordion .accordion-item button:focus {
+  background-color: #EBE673;
+}
+.home-wrapper__container__row__col .list .accordion .accordion-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (max-width: 575px) {
+  .customer-wrapper {
+    padding: 1.5rem 1rem !important;
+  }
+}
+.customer-wrapper__container__row__col1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .customer-wrapper__container__row__col1 {
+    display: none;
+  }
+}
+.customer-wrapper__container__row__col1 h5 {
+  font-size: 1.1rem;
+}
+.customer-wrapper__container__row__col1 .lists-wrapper {
+  background-color: #fdc99f;
+  padding: 1.5rem 1.5rem;
+  border-radius: 0.4rem;
+  width: 100%;
+  font-size: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.1rem;
+}
+.customer-wrapper__container__row__col2 h5 {
+  font-size: 1rem;
+}
+.customer-wrapper__container__row__col2 form {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  gap: 1rem;
+}
+.customer-wrapper__container__row__col2 form .search {
+  width: 100%;
+  background: #f1eea0;
+  padding: 0.45rem 0.8rem;
+  font-size: 0.7rem;
+  border-radius: 0.4rem;
+  position: relative;
+}
+@media (max-width: 575px) {
+  .customer-wrapper__container__row__col2 form .search {
+    font-size: 0.6rem;
+  }
+}
+.customer-wrapper__container__row__col2 form .search input {
+  width: 97%;
+  border: none;
+  outline: none;
+  background: none;
+}
+.customer-wrapper__container__row__col2 form .search i {
+  font-size: 0.9rem;
+  position: absolute;
+  right: 0.5rem;
+}
+.customer-wrapper__container__row__col2 form .input-fields {
+  width: 100%;
+}
+.customer-wrapper__container__row__col2 form .input-fields table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.customer-wrapper__container__row__col2 form .input-fields table th {
+  font-size: 0.6rem;
+  font-weight: 500;
+}
+@media (max-width: 575px) {
+  .customer-wrapper__container__row__col2 form .input-fields table th {
+    font-size: 0.5rem !important;
+  }
+}
+.customer-wrapper__container__row__col2 form .input-fields table th.tax {
+  font-size: 0.6rem;
+  font-weight: 500;
+  width: 20%;
+  background: none;
+}
+.customer-wrapper__container__row__col2 form .input-fields table th.name {
+  font-size: 0.6rem;
+  font-weight: 500;
+  width: 30%;
+  background: none;
+}
+.customer-wrapper__container__row__col2 form .input-fields table th.address {
+  font-size: 0.6rem;
+  font-weight: 500;
+  width: 50%;
+  background: none;
+}
+.customer-wrapper__container__row__col2 form .input-fields table td input[type=checkbox]:checked {
+  accent-color: #FF5050;
+  border: none;
+  background: none;
+}
+.customer-wrapper__container__row__col2 form .input-fields table .checkbox {
+  margin-right: 0.3rem;
+}
+@media (max-width: 575px) {
+  .customer-wrapper__container__row__col2 form .input-fields table .checkbox {
+    margin-top: 0.5rem;
+  }
+}
+.customer-wrapper__container__row__col2 form .input-fields table .id {
+  width: 100%;
+  border-radius: 0.4rem;
+  border: none;
+  outline: none;
+  background: #fee5d1;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.7rem;
+}
+@media (max-width: 575px) {
+  .customer-wrapper__container__row__col2 form .input-fields table .id {
+    font-size: 0.6rem;
+  }
+}
+.customer-wrapper__container__row__col2 form .input-fields table .name {
+  width: 100%;
+  border-radius: 0.4rem;
+  border: none;
+  outline: none;
+  background: #fee5d1;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.7rem;
+}
+@media (max-width: 575px) {
+  .customer-wrapper__container__row__col2 form .input-fields table .name {
+    font-size: 0.6rem;
+  }
+}
+.customer-wrapper__container__row__col2 form .input-fields table .address {
+  width: 100%;
+  border-radius: 0.4rem;
+  border: none;
+  outline: none;
+  background: #fee5d1;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.7rem;
+}
+@media (max-width: 575px) {
+  .customer-wrapper__container__row__col2 form .input-fields table .address {
+    font-size: 0.6rem;
+  }
+}
+.customer-wrapper__container__row__col2 form .input-fields table td.icons {
+  margin-left: 0.3rem;
+}
+.customer-wrapper__container__row__col2 form .input-fields table td.icons i {
+  font-size: 0.85rem;
+}
+@media (max-width: 575px) {
+  .customer-wrapper__container__row__col2 form .input-fields table td.icons i {
+    margin-top: 0.35rem;
+    font-size: 0.65rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .modal-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.modal-body .modal-edit-wrapper {
+  padding: 1.5rem 2rem !important;
+}
+.modal-body .modal-edit-wrapper h5 {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+.modal-body .modal-edit-wrapper .form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.modal-body .modal-edit-wrapper .form label {
+  font-size: 0.8rem;
+}
+.modal-body .modal-edit-wrapper .form .first {
+  display: flex;
+  flex-direction: row !important;
+  align-items: center;
+  gap: 1rem;
+}
+.modal-body .modal-edit-wrapper .form .first > :nth-child(1) input {
+  width: 100%;
+  border: none;
+  border-radius: 0.3rem;
+  background-color: #fef7d7;
+  padding: 0.4rem 0.6rem;
+  font-size: 1rem;
+}
+@media (max-width: 767px) {
+  .modal-body .modal-edit-wrapper .form .first > :nth-child(1) input {
+    font-size: 0.9rem;
+  }
+}
+.modal-body .modal-edit-wrapper .form .first > :nth-child(2) input {
+  width: 100%;
+  border: none;
+  border-radius: 0.3rem;
+  background-color: #fef7d7;
+  padding: 0.4rem 0.6rem;
+  font-size: 1rem;
+}
+@media (max-width: 767px) {
+  .modal-body .modal-edit-wrapper .form .first > :nth-child(2) input {
+    font-size: 0.9rem;
+  }
+}
+.modal-body .modal-edit-wrapper .form .second {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.modal-body .modal-edit-wrapper .form .second > :nth-child(1) input {
+  width: 100%;
+  border: none;
+  border-radius: 0.3rem;
+  background-color: #fef7d7;
+  padding: 0.4rem 0.6rem;
+  font-size: 1rem;
+}
+@media (max-width: 767px) {
+  .modal-body .modal-edit-wrapper .form .second > :nth-child(1) input {
+    font-size: 0.9rem;
+  }
+}
+.modal-body .modal-edit-wrapper .form .second > :nth-child(2) input {
+  width: 100%;
+  border: none;
+  border-radius: 0.3rem;
+  background-color: #fef7d7;
+  padding: 0.4rem 0.6rem;
+  font-size: 1rem;
+}
+@media (max-width: 767px) {
+  .modal-body .modal-edit-wrapper .form .second > :nth-child(2) input {
+    font-size: 0.9rem;
+  }
+}
+.modal-body .modal-edit-wrapper .form .third {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.modal-body .modal-edit-wrapper .form .third > :nth-child(1) .checkbox {
+  margin-top: 0.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.modal-body .modal-edit-wrapper .form .third > :nth-child(1) .checkbox .same-above {
+  font-size: 0.8rem;
+}
+.modal-body .modal-edit-wrapper .form .third > :nth-child(1) input#address {
+  width: 100%;
+  border: none;
+  border-radius: 0.3rem;
+  background-color: #fef7d7;
+  padding: 0.4rem 0.6rem;
+  font-size: 1rem;
+}
+@media (max-width: 767px) {
+  .modal-body .modal-edit-wrapper .form .third > :nth-child(1) input#address {
+    font-size: 0.9rem;
+  }
+}
+.modal-body .modal-edit-wrapper .form .third > :nth-child(2) input {
+  width: 100%;
+  border: none;
+  border-radius: 0.3rem;
+  background-color: #fef7d7;
+  padding: 0.4rem 0.6rem;
+  font-size: 1rem;
+}
+@media (max-width: 767px) {
+  .modal-body .modal-edit-wrapper .form .third > :nth-child(2) input {
+    font-size: 0.9rem;
+  }
+}
+.modal-body .modal-edit-wrapper .form .fourth {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.modal-body .modal-edit-wrapper .form .fourth > :nth-child(1) input {
+  width: 100%;
+  border: none;
+  border-radius: 0.3rem;
+  background-color: #fef7d7;
+  padding: 0.4rem 0.6rem;
+  font-size: 1rem;
+}
+@media (max-width: 767px) {
+  .modal-body .modal-edit-wrapper .form .fourth > :nth-child(1) input {
+    font-size: 0.9rem;
+  }
+}
+.modal-body .modal-edit-wrapper .form .fourth > :nth-child(2) input {
+  width: 100%;
+  border: none;
+  border-radius: 0.3rem;
+  background-color: #fef7d7;
+  padding: 0.4rem 0.6rem;
+  font-size: 1rem;
+}
+@media (max-width: 767px) {
+  .modal-body .modal-edit-wrapper .form .fourth > :nth-child(2) input {
+    font-size: 0.9rem;
+  }
+}
+.modal-body .modal-edit-wrapper .form .fourth > :nth-child(3) input {
+  width: 100%;
+  border: none;
+  border-radius: 0.3rem;
+  background-color: #fef7d7;
+  padding: 0.4rem 0.6rem;
+  font-size: 1rem;
+}
+@media (max-width: 767px) {
+  .modal-body .modal-edit-wrapper .form .fourth > :nth-child(3) input {
+    font-size: 0.9rem;
+  }
+}
+.modal-body .modal-edit-wrapper .form .fifth {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.modal-body .modal-edit-wrapper .form .fifth > :nth-child(1) input {
+  width: 100%;
+  border: none;
+  border-radius: 0.3rem;
+  background-color: #fef7d7;
+  padding: 0.4rem 0.6rem;
+  font-size: 1rem;
+}
+@media (max-width: 767px) {
+  .modal-body .modal-edit-wrapper .form .fifth > :nth-child(1) input {
+    font-size: 0.9rem;
+  }
+}
+.modal-body .modal-edit-wrapper .form .fifth > :nth-child(2) input {
+  width: 100%;
+  border: none;
+  border-radius: 0.3rem;
+  background-color: #fef7d7;
+  padding: 0.4rem 0.6rem;
+  font-size: 1rem;
+}
+@media (max-width: 767px) {
+  .modal-body .modal-edit-wrapper .form .fifth > :nth-child(2) input {
+    font-size: 0.9rem;
+  }
+}
+.modal-body .modal-edit-wrapper .form .fifth > :nth-child(3) input {
+  width: 100%;
+  border: none;
+  border-radius: 0.3rem;
+  background-color: #fef7d7;
+  padding: 0.4rem 0.6rem;
+  font-size: 1rem;
+}
+@media (max-width: 767px) {
+  .modal-body .modal-edit-wrapper .form .fifth > :nth-child(3) input {
+    font-size: 0.9rem;
+  }
+}
+.modal-body .modal-edit-wrapper .form .sixth {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.modal-body .modal-edit-wrapper .form .sixth > :nth-child(1) input {
+  width: 100%;
+  border: none;
+  border-radius: 0.3rem;
+  background-color: #fef7d7;
+  padding: 0.4rem 0.6rem;
+  font-size: 1rem;
+}
+@media (max-width: 767px) {
+  .modal-body .modal-edit-wrapper .form .sixth > :nth-child(1) input {
+    font-size: 0.9rem;
+  }
+}
+.modal-body .modal-edit-wrapper .form .sixth > :nth-child(2) input {
+  width: 100%;
+  border: none;
+  border-radius: 0.3rem;
+  background-color: #fef7d7;
+  padding: 0.4rem 0.6rem;
+  font-size: 1rem;
+}
+@media (max-width: 767px) {
+  .modal-body .modal-edit-wrapper .form .sixth > :nth-child(2) input {
+    font-size: 0.9rem;
+  }
+}
+
+.modal-footer button:nth-child(1) {
+  background-color: #FA913C;
+}
+.modal-footer button:nth-child(2) {
+  background-color: #e5bb05;
+}
+.modal-footer button:nth-child(3) {
+  background-color: #FF5050;
+}
