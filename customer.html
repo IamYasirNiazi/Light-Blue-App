@@ -32,16 +32,16 @@
         <div class="header__container__row row">
           <div class="header__container__row__col col col-md-12 col-lg-12">
             <div class="main">
-              <a href="/">
-                <img src="./images/logo.png" alt="logo" class="img-fluid" />
-              </a>
-              <button
-                class="btn"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModalSignIn"
-              >
+              <div class="left-side">
+                <i class="ri-menu-line" id="hamburger" onclick="toggleBtn()"></i>
+                <a href="/">
+                  <img src="./images/logo.png" alt="logo" class="img-fluid" />
+                </a>
+              </div>
+              <a
+                class="btn" href="./login.html">
                 Login
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -54,24 +54,60 @@
           class="customer-wrapper__container__row row d-flex justify-content-center align-items-start gap-3"
         >
           <div
-            class="customer-wrapper__container__row__col1 col col-sm-10 col-md-3 col-lg-3"
+            class="customer-wrapper__container__row__col1 col col-sm-10 col-md-3 col-lg-3" id="menu-list"
           >
             <h5>ERP</h5>
             <div class="lists-wrapper">
               <div class="list">
-                Database
-                <ul class="mt-2 mb-2">
-                  <li>Customer</li>
-                  <li>Vendor</li>
-                  <li>Product</li>
-                  <li>Parts</li>
-                  <li>Quotation</li>
+                <span class="active" id="database">Database</span>
+                <ul class="mt-2 mb-2" id="database-list">
+                  <li class="fw-medium fst-italic"><a href="./customer.html">Customer</a></li>
+                  <li><a href="./vendor.html">Vendor</a></li>
+                  <li><a href="./product.html">Product</a></li>
+                  <li><a href="./parts.html">Parts</a></li>
+                  <li><a href="./quotation.html">Quotation</a></li>
                 </ul>
               </div>
-              <div class="list">Order</div>
-              <div class="list">Production</div>
-              <div class="list">Accounting</div>
-              <div class="list">Receiving</div>
+              <div class="list">
+                <span id="order">Order</span>
+                <ul class="mt-2 mb-2" id="order-list">
+                  <li class=""><a href="./customer.html">Customer</a></li>
+                  <li><a href="./vendor.html">Vendor</a></li>
+                  <li><a href="./product.html">Product</a></li>
+                  <li><a href="./parts.html">Parts</a></li>
+                  <li><a href="./quotation.html">Quotation</a></li>
+                </ul>
+              </div>
+              <div class="list">
+                <span id="production">Production</span>
+                <ul class="mt-2 mb-2" id="production-list">
+                  <li class=""><a href="./customer.html">Customer</a></li>
+                  <li><a href="./vendor.html">Vendor</a></li>
+                  <li><a href="./product.html">Product</a></li>
+                  <li><a href="./parts.html">Parts</a></li>
+                  <li><a href="./quotation.html">Quotation</a></li>
+                </ul>
+              </div>
+              <div class="list">
+                <span id="accounting">Accounting</span>
+                <ul class="mt-2 mb-2" id="accounting-list">
+                  <li class=""><a href="./customer.html">Customer</a></li>
+                  <li><a href="./vendor.html">Vendor</a></li>
+                  <li><a href="./product.html">Product</a></li>
+                  <li><a href="./parts.html">Parts</a></li>
+                  <li><a href="./quotation.html">Quotation</a></li>
+                </ul>
+              </div>
+              <div class="list">
+                <span id="receiving">Receiving</span>
+                <ul class="mt-2 mb-2" id="receiving-list">
+                  <li class=""><a href="./customer.html">Customer</a></li>
+                  <li><a href="./vendor.html">Vendor</a></li>
+                  <li><a href="./product.html">Product</a></li>
+                  <li><a href="./parts.html">Parts</a></li>
+                  <li><a href="./quotation.html">Quotation</a></li>
+                </ul>
+              </div>
             </div>
           </div>
 
@@ -188,6 +224,8 @@
 
     <!-- Javascript Code Starts form Here -->
 
+    <!-- CDN Links Start -->
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js"
       integrity="sha512-6DC1eE3AWg1bgitkoaRM1lhY98PxbMIbhgYCGV107aZlyzzvaWCW1nJW2vDuYQm06hXrW0As6OGKcIaAVWnHJw=="
@@ -220,9 +258,81 @@
       referrerpolicy="no-referrer"
     ></script>
 
+    <!-- CDN Links End -->
+
+
+
+
+    <!-- Hamburger Btn -->
+    <script>
+      function toggleBtn(){
+        const hamburger = document.getElementById("hamburger")
+        const list = document.getElementById("menu-list")
+
+        list.classList.toggle("hamburger-menu-show")
+      }
+
+      document.addEventListener('click', (event)=>{
+        const hamburger = document.getElementById("hamburger")
+
+        if(!hamburger.contains(event.target)){
+          const list = document.getElementById("menu-list")
+          list.classList.remove("hamburger-menu-show")
+        }
+
+      })
+
+      const list = document.getElementById("menu-list")
+      list.addEventListener('click', (event)=>{
+        event.stopPropagation()
+      })
+    </script>
+
+
+    <!-- Left Column Sub-Menu Open Close -->
+    <script>
+      const database = document.getElementById("database")
+      database.addEventListener('click', ()=>{
+        const database_list = document.getElementById("database-list")
+        database_list.classList.toggle("hide")
+      })
+
+      const order = document.getElementById("order")
+      const order_list = document.getElementById("order-list")
+      order_list.classList.add("hide")
+      order.addEventListener('click', ()=>{
+        const order_list = document.getElementById("order-list")
+        order_list.classList.toggle("hide")
+      })
+
+      const production = document.getElementById("production")
+      const production_list = document.getElementById("production-list")
+      production_list.classList.add("hide")
+      production.addEventListener('click', ()=>{
+        const production_list = document.getElementById("production-list")
+        production_list.classList.toggle("hide")
+      })
+
+      const accounting = document.getElementById("accounting")
+      const accounting_list = document.getElementById("accounting-list")
+      accounting_list.classList.add("hide")
+      accounting.addEventListener('click', ()=>{
+        const accounting_list = document.getElementById("accounting-list")
+        accounting_list.classList.toggle("hide")
+      })
+
+      const receiving = document.getElementById("receiving")
+      const receiving_list = document.getElementById("receiving-list")
+      receiving_list.classList.add("hide")
+      receiving.addEventListener('click', ()=>{
+        const receiving_list = document.getElementById("receiving-list")
+        receiving_list.classList.toggle("hide")
+      })
+    </script>
+
 
     <!-- Modal Sign up -->
-    <div
+    <!-- <div
       class="modal fade"
       id="exampleModalSignUp"
       tabindex="-1"
@@ -248,26 +358,20 @@
                     class="sign-up__container__row__col col col-sm-11 col-md-11"
                   >
                     <form action="">
-                      <!-- <div class="name"> -->
                       <label>
                         <h6>Username</h6>
                         <input type="text" class="text" />
                       </label>
-                      <!-- </div> -->
 
-                      <!-- <div class="email"> -->
                       <label>
                         <h6>Email</h6>
                         <input type="text" class="email" />
                       </label>
-                      <!-- </div> -->
 
-                      <!-- <div class="password"> -->
                       <label>
                         <h6>Password</h6>
                         <input type="password" class="password" />
                       </label>
-                      <!-- </div> -->
 
                       <div>
                         <input
@@ -292,17 +396,13 @@
               </div>
             </div>
           </div>
-          <!-- <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div> -->
         </div>
       </div>
-    </div>
+    </div> -->
 
 
     <!-- Modal Sign in -->
-    <div
+    <!-- <div
       class="modal fade"
       id="exampleModalSignIn"
       tabindex="-1"
@@ -328,26 +428,20 @@
                     class="sign-up__container__row__col col col-sm-11 col-md-11"
                   >
                     <form action="">
-                      <!-- <div class="name"> -->
                       <label>
                         <h6>Username</h6>
                         <input type="text" class="text" />
                       </label>
-                      <!-- </div> -->
 
-                      <!-- <div class="email"> -->
                       <label>
                         <h6>Email</h6>
                         <input type="text" class="email" />
                       </label>
-                      <!-- </div> -->
 
-                      <!-- <div class="password"> -->
                       <label>
                         <h6>Password</h6>
                         <input type="password" class="password" />
                       </label>
-                      <!-- </div> -->
 
                       <div>
                         <input
@@ -372,16 +466,13 @@
               </div>
             </div>
           </div>
-          <!-- <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div> -->
         </div>
       </div>
-    </div>
+    </div> -->
 
 
-    <script>
+    <!-- Modal SignIn SignUp Open Close -->
+    <!-- <script>
       $("#signUp").click(function () {
         $("#exampleModalSignIn").modal("hide");
         $("#exampleModalSignUp").modal("show");
@@ -391,7 +482,7 @@
         $("#exampleModalSignUp").modal("hide");
         $("#exampleModalSignIn").modal("show");
       });
-    </script>
+    </script> -->
 
 
     <!-- Edit Modal -->
@@ -402,10 +493,10 @@
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
     >
-      <div class="modal-dialog moal-md modal-lg modal-xl modal-dialog-centered">
+      <div class="modal-dialog modal-md modal-lg modal-xl modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">
+            <h1 class="modal-title" id="exampleModalLabel">
               Edit Customer Details
             </h1>
             <button
@@ -518,6 +609,8 @@
       </div>
     </div>
 
+
+    <!-- Edit Modal Open Btn -->
     <script>
       function editBtn(index) {
         $("#modalEdit").modal("show");
